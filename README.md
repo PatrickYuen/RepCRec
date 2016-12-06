@@ -1,5 +1,5 @@
 RepCRec - Replicated Concurrency Control and Recovery
-Authors: Patrick Yuen, Sanaya Bhatena
+Authors: Patrick Yuen, Sanaya Bhathena
 
 ===========================================================================
 - Run Instructions:
