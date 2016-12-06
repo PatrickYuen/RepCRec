@@ -433,7 +433,7 @@ public class TransactionManager {
 		}
 		
 		//Abort Write Locks 
-		for(String tr : sites[siteNum - 1].getLockManager().writeLocks.values()) {
+		for(String tr : new ArrayList<String>(sites[siteNum - 1].getLockManager().writeLocks.values())) {
 			abort(transactions.get(tr));
 		}
 		
@@ -582,7 +582,7 @@ public class TransactionManager {
 	/*
 	 * Input: Transaction
 	 * Output: NA
-	 * Effects: Goto each variable you’ve written to and write value to committed value, unlock each lock
+	 * Effects: Goto each variable youÂ’ve written to and write value to committed value, unlock each lock
 	 */
 	private void commit(Transaction tr) {
 		//Abort transaction if still waiting operations
