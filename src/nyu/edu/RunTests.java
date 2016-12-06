@@ -26,7 +26,7 @@ public class RunTests {
 		for(File testFile : inputDirectory.listFiles()) {
 			System.out.println("Running test: " + testFile);
 			String outputFile = outputDirectory.getName() + "\\result-" + testFile.getName();
-			RepCRec_Driver.main(new String[]{ outputFile , testFile.getPath() });
+			RepCRec_Driver.main(new String[]{ testFile.getPath(), outputFile });
 		}
 		
 		System.out.println("Finished Tests");
