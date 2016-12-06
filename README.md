@@ -1,44 +1,37 @@
 RepCRec - Replicated Concurrency Control and Recovery
 
-Authors: Patrick Yuen, Sanaya Bhathena
+Authors: Patrick Yuen, Sanaya Bhathena  
 
 ===========================================================================
-- Run Instructions:
-Running the main Driver:
+- Run Instructions:  
+Make sure java version is 1.8 (on energon1, module load java-1.8)  
+Running the main Driver:  
 
-*In src, compile with javac -cp . nyu.edu.RepCRec_Driver.java 
-
-java -cp . nyu.edu.RepCRec_Driver [InputFileName] [Output FileName]
+*In src, compile with javac -cp . nyu.edu.RepCRec_Driver.java  
+java -cp . nyu.edu.RepCRec_Driver [InputFileName] [Output FileName]  
 
 or use the provided jar 
 
-  java -cp repcrecAdb.jar nyu.edu.RepCRec_Driver [Output FileName or "-stdout"] [InputFileName]
+  java -cp repcrecAdb.jar nyu.edu.RepCRec_Driver [InputFileName] [Output FileName]  
 
-* 2 arguments assume <inputFile> <outputFile>
-* 1 argument assumes: <inputFile>
-* 0 arguments will be complete command line interface.
+*2 arguments assume arguements as: [inputFile] [outputFile]  
+*1 argument assumes: [inputFile]   
+*0 arguments will be complete command line interface.    
 
-Example Input:
+To bulk run tests:  
+  java -cp repcrecADB.jar nyu.edu.RunTests [test Output Directory] [test Directory]  
+
+Example Input:  
+begin(T1)  
+begin(T2)  
+W(T1,x1,101)   
+W(T2,x2,202)  
+W(T1,x2,102);W(T2,x1,201)  
+end(T1)  
+end(T2)  
+dump()  
   
-  begin(T1)
-  
-  begin(T2)
-  
-  W(T1,x1,101) 
-  
-  W(T2,x2,202)
-  
-  W(T1,x2,102) 
-  
-  W(T2,x1,201)
-  
-  end(T1)
-  
-  end(T2)
-  
-  dump()
-  
-  Reprozip rpz: https://drive.google.com/file/d/0B_dgWatPZKshUTRieEo1Y0Q0Q3M/view?usp=sharing
+*Reprozip packages run on energon1 included.  
 
 ===========================================================================
 
