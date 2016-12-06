@@ -12,7 +12,7 @@ java -cp . nyu.edu.RepCRec_Driver [InputFileName] [Output FileName]
 
 or use the provided jar 
 
-  java -cp repcrecAdb.jar nyu.edu.RepCRec_Driver [InputFileName] [Output FileName]  
+  java -cp repcrecADB.jar nyu.edu.RepCRec_Driver [InputFileName] [Output FileName]  
 
 *2 arguments assume arguements as: [inputFile] [outputFile]  
 *1 argument assumes: [inputFile]   
@@ -31,7 +31,14 @@ end(T1)
 end(T2)  
 dump()  
   
-*Reprozip packages run on energon1 included.  
+*Reprozip packages run on energon1 as google drive links since they are quite large (~50 MB):  
+Normal run:
+java -cp repcrecADB.jar nyu.edu.RepCRec_Driver Input.txt  
+https://drive.google.com/file/d/0B_dgWatPZKsha1JPakNYLVdQS0E/view?usp=sharing  
+
+Bulk Testing:
+java -cp repcrecADB.jar nyu.edu.RunTests testOutput tests  
+https://drive.google.com/file/d/0B_dgWatPZKshZHdzdEd3SWg3eE0/view?usp=sharing
 
 ===========================================================================
 
