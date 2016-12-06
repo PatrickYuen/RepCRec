@@ -29,6 +29,12 @@ public class RepCRec_Driver {
 		
 		if(args.length == 2) { //Input File
 			br = new BufferedReader(new FileReader(args[1]));
+			
+			//Output to stdout flag
+			if(args[0].toLowerCase().equals("-stdout")) {
+				cmdline = true;
+				tm.cmdline = true;
+			}
 		} else { //Standard Input
 			br = new BufferedReader(new InputStreamReader(System.in));
 			cmdline = true;
