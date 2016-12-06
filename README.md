@@ -6,7 +6,8 @@ Authors: Patrick Yuen, Sanaya Bhatena
 Running the main Driver:
 
 *In src, compile with javac -cp . nyu.edu.RepCRec_Driver.java 
-  java -cp . nyu.edu.RepCRec_Driver [InputFileName] [Output FileName]
+
+java -cp . nyu.edu.RepCRec_Driver [InputFileName] [Output FileName]
 
 or use the provided jar 
 
