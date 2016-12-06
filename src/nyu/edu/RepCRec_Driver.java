@@ -16,29 +16,22 @@ public class RepCRec_Driver {
 	}
 	
 	public static void main(String[] args) throws Exception {
-		if(args.length < 1) {
-			System.out.println("Please input outputFile or stdout flag");
-			return;
-		}
 		
 		initDB();
 		
 		BufferedReader br;
 		String line;
-		boolean cmdline = false;
+		boolean cmdline = true;
+		tm.cmdline = true;
 		
-		if(args.length == 2) { //Input File
-			br = new BufferedReader(new FileReader(args[1]));
-			
-			//Output to stdout flag
-			if(args[0].toLowerCase().equals("-stdout")) {
-				cmdline = true;
-				tm.cmdline = true;
+		if(args.length > 0) { //Input File
+			br = new BufferedReader(new FileReader(args[0]));
+			if(args.length == 2) {
+				cmdline = false;
+				tm.cmdline = false;
 			}
 		} else { //Standard Input
 			br = new BufferedReader(new InputStreamReader(System.in));
-			cmdline = true;
-			tm.cmdline = true;
 			System.out.println("Command Line Mode: Please Type commands below");
 		}
 		
@@ -56,13 +49,13 @@ public class RepCRec_Driver {
 		if(!cmdline) {
 			File outputfile = new File(args[0]);
 			if(!outputfile.exists()) {
-				System.out.println("Created New Output File: " + args[0]);
+				System.out.println("Created New Output File: " + args[1]);
 				outputfile.createNewFile();
 			}
 			
-			BufferedWriter bw = new BufferedWriter(new FileWriter(args[0]));
+			BufferedWriter bw = new BufferedWriter(new FileWriter(args[1]));
 			bw.write(tm.showStatus());
-		    System.out.println("Output written Successfully to: " + args[0]);
+		    System.out.println("Output written Successfully to: " + args[1]);
 		    bw.close();
 		} else {
 			System.out.println(tm.showStatus());
