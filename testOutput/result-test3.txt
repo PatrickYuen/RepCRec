@@ -1,0 +1,13 @@
+T: 0 Created Transaction t1
+T: 1 Created Transaction t2
+T: 2 Transaction t1 read 30 from x3 on site 4
+T: 3 Site 2 went down
+T: 4 Transaction t2 wrote 88 to x8
+T: 5 Transaction t2 read 30 from x3 on site 4
+T: 6 Transaction t1 wrote 91 to x5
+T: 7 Commit Transaction t2
+T: 8 Site 2 came back up
+T: 9 Commit Transaction t1
+
+Transaction t1: Committed
+Transaction t2: Committed

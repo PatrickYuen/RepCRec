@@ -1,0 +1,23 @@
+T: 0 Created Transaction t5
+T: 1 Created Transaction t4
+T: 2 Created Transaction t3
+T: 3 Created Transaction t2
+T: 4 Created Transaction t1
+T: 5 Transaction t1 wrote 5 to x4
+T: 6 Site 2 went down
+T: 6 Abort Transaction t1
+T: 7 Transaction t2 wrote 44 to x4
+T: 8 Site 2 came back up
+T: 13 Commit Transaction t2
+T: 13 Transaction t3 wrote 55 to x4
+T: 14 Commit Transaction t3
+T: 14 Transaction t4 wrote 66 to x4
+T: 15 Commit Transaction t4
+T: 15 Transaction t5 wrote 77 to x4
+T: 16 Commit Transaction t5
+
+Transaction t4: Committed
+Transaction t5: Committed
+Transaction t1: Aborted
+Transaction t2: Committed
+Transaction t3: Committed

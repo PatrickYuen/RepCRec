@@ -1,0 +1,14 @@
+T: 0 Created Transaction t1
+T: 1 Created Transaction t2
+T: 2 Created Transaction t3
+T: 3 Transaction t3 wrote 22 to x2
+T: 4 Transaction t2 wrote 44 to x4
+T: 6 Commit Transaction t2
+T: 6 Transaction t3 read 44 from x4 on site 1
+T: 7 Commit Transaction t3
+T: 8 Transaction t1 read 22 from x2 on site 1
+T: 9 Commit Transaction t1
+
+Transaction t1: Committed
+Transaction t2: Committed
+Transaction t3: Committed

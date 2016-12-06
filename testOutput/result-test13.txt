@@ -1,0 +1,13 @@
+T: 0 Created Transaction t1
+T: 1 Created Transaction t2
+T: 2 Created Transaction t3
+T: 3 Transaction t3 wrote 10 to x2
+T: 6 Commit Transaction t3
+T: 6 Transaction t2 wrote 10 to x2
+T: 7 Commit Transaction t2
+T: 7 Transaction t1 wrote 10 to x2
+T: 8 Commit Transaction t1
+
+Transaction t1: Committed
+Transaction t2: Committed
+Transaction t3: Committed

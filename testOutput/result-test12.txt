@@ -1,0 +1,10 @@
+T: 0 Created Transaction t1
+T: 1 Created Transaction t2
+T: 2 Transaction t1 read 20 from x2 on site 1
+T: 3 Transaction t2 read 20 from x2 on site 1
+T: 4 Commit Transaction t1
+T: 5 Transaction t2 wrote 10 to x2
+T: 6 Commit Transaction t2
+
+Transaction t1: Committed
+Transaction t2: Committed

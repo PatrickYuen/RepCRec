@@ -1,0 +1,11 @@
+T: 0 Created Transaction t1
+T: 1 Created Read Only Transaction t2
+T: 2 Transaction t2 read 10 from x1
+T: 3 Transaction t2 read 20 from x2
+T: 4 Transaction t1 wrote 33 to x3
+T: 5 Commit Transaction t1
+T: 6 Transaction t2 read 30 from x3
+T: 7 Commit Transaction t2
+
+Transaction t1: Committed
+Transaction t2: Committed
